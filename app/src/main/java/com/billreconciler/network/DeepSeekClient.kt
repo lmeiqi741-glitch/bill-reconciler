@@ -4,6 +4,7 @@ import com.billreconciler.data.ParsedTransaction
 import com.billreconciler.data.ParseResult
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import java.lang.reflect.Type
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.MediaType.Companion.toMediaType
@@ -126,7 +127,8 @@ object BillDeepSeekClient {
             }
         }
 
-        val map = gson.fromJson(jsonText, Map::class.java)
+        val mapType = object : TypeToken<Map<String, Any>>() {}.type
+        val map: Map<String, Any> = gson.fromJson(jsonText, mapType)
         val platform = map["platform"] as? String ?: "未知"
         val transactionsRaw = map["transactions"] as? List<*> ?: emptyList()
 
