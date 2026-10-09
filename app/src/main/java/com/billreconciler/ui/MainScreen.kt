@@ -212,7 +212,7 @@ fun HomeScreen(viewModel: BillViewModel, repository: BillRepository) {
                             Modifier.padding(14.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Icon(Icons.Default.Add, null, SuccessColor, Modifier.size(20.dp))
+                            Icon(Icons.Default.Add, contentDescription = null, tint = SuccessColor, modifier = Modifier.size(20.dp))
                             Spacer(Modifier.size(8.dp))
                             Column {
                                 Text("✅ 解析成功", color = SuccessColor, fontWeight = FontWeight.SemiBold)
