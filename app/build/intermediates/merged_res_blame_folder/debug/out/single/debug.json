@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.billreconciler.app-merged_res-60:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.billreconciler.app-main-62:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.billreconciler.app-merged_res-60:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.billreconciler.app-main-62:/mipmap-anydpi-v26/ic_launcher.xml"
+    }
+]
